@@ -1,0 +1,36 @@
+.gallery {
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    margin: 85px 100px;
+    overflow: hidden;
+
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__item {
+        transition: all .5s;
+        overflow: hidden;
+    }
+
+
+    &__item:hover {
+        filter: blur(2px);
+        filter: brightness(60%);
+        // transform: rotateZ(10deg);
+        transform: scale(1.1);
+    
+    }
+
+    &__item--1 {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}

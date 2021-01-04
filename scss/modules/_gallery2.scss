@@ -1,0 +1,24 @@
+.gallery2 {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    overflow: hidden;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    &__item {
+        transition: all .5s;
+        overflow: hidden;
+    }
+
+
+    &__item:hover {
+        filter: brightness(60%);
+    }
+}
