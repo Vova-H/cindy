@@ -80,7 +80,6 @@ body, html {
   -ms-grid-rows: (auto)[3];
       grid-template-rows: repeat(3, auto);
   margin: 85px 100px;
-  overflow: hidden;
 }
 
 .gallery__img {
@@ -88,21 +87,26 @@ body, html {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.gallery__item {
   -webkit-transition: all .5s;
   transition: all .5s;
-  overflow: hidden;
 }
 
-.gallery__item:hover {
+.gallery__img:hover {
   -webkit-filter: blur(2px);
           filter: blur(2px);
   -webkit-filter: brightness(60%);
           filter: brightness(60%);
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: rotateZ(10deg) scale(1.3);
+          transform: rotateZ(10deg) scale(1.3);
+}
+
+.gallery__item {
+  overflow: hidden;
+}
+
+.gallery__item:hover {
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .gallery__item--1 {

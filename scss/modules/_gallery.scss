@@ -4,26 +4,28 @@
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(3, auto);
     margin: 85px 100px;
-    overflow: hidden;
 
 
     &__img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: all .5s;
+
+        &:hover{
+            filter: blur(2px);
+            filter: brightness(60%);
+            transform: rotateZ(10deg) scale(1.3);
+        }
     }
 
     &__item {
-        transition: all .5s;
         overflow: hidden;
     }
 
 
     &__item:hover {
-        filter: blur(2px);
-        filter: brightness(60%);
-        // transform: rotateZ(10deg);
-        transform: scale(1.1);
+     transition: all .5s;
     
     }
 
